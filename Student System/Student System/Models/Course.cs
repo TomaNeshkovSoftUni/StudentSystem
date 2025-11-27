@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using StudentSystem;
 using System.ComponentModel.DataAnnotations;
 
 namespace Student_System.Models
@@ -23,7 +22,9 @@ namespace Student_System.Models
         public decimal Price { get; set; }
 
         public ICollection<Student> StudentsEnrolled { get; set; } = new List<Student>();
+
         public ICollection<Resource> Resources { get; set; } = new List<Resource>();
-        public ICollection<HomeworkSubmissions> HomeworkSubmissions = new List<HomeworkSubmissions>();
+
+        public ICollection<HomeworkSubmissions> HomeworkSubmissions { get; set; } = new List<HomeworkSubmissions>();
     }
 }
